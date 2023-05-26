@@ -23,7 +23,7 @@ Users should be able to:
 ### Links
 
 -   Solution URL: [Github](https://github.com/Bouhafi7/Password-generator-app)
--   Live Site URL: [Render](https://password-generator-app-1rf6.onrender.com)
+-   Live Site URL: [Render](https://password-generator-app-vozk.onrender.com)
 
 ### Built with
 
