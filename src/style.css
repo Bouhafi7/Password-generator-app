@@ -37,7 +37,7 @@ body {
 }
 @media (max-width: 565px) {
   .container .pass-container .password {
-    font-size: 23px;
+    font-size: 16px;
   }
 }
 .container .pass-container button {
