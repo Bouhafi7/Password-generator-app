@@ -1,6 +1,7 @@
 let bar = document.querySelector('.bar');
 let range = document.querySelector('.range');
 let passLength = document.querySelector('.length');
+const copy = document.querySelector('.copy');
 
 const rangeValue = () => {
     passLength.innerText = range.value;
@@ -98,6 +99,24 @@ const generatePassword = () => {
     }
     calcStrength(charStrength);
     password.innerText = randomPass;
+    copy.classList.remove('disabled');
 };
 
 generate.addEventListener('click', generatePassword);
+
+
+function copyToClipboard() {
+    let range = document.createRange();
+    range.selectNode(password);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    document.execCommand('copy');
+    window.getSelection().removeAllRanges();
+    let copyAlert = document.querySelector('.alert');
+    copyAlert.classList.add('show');
+    setTimeout(() => {
+        copyAlert.classList.remove('show');
+    }, 2000);
+}
+
+copy.addEventListener('click', copyToClipboard);

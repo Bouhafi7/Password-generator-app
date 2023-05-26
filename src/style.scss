@@ -41,6 +41,26 @@ body{
             border: none;
             background-color: transparent;
             cursor: pointer;
+            position: relative;
+            &.disabled{
+                pointer-events: none;
+            }
+            .alert{
+                color: #A3FFAE;
+                font-weight: 600;
+                position: absolute;
+                top: 50%;
+                left: -51px;
+                font-size: 12px;
+                transform: translateY(-50%);
+                visibility: hidden;
+                opacity: 0;
+                transition: all .2s;
+                &.show{
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
             &:hover img{
                 filter: contrast(3.5);
             }

@@ -44,6 +44,26 @@ body {
   border: none;
   background-color: transparent;
   cursor: pointer;
+  position: relative;
+}
+.container .pass-container button.disabled {
+  pointer-events: none;
+}
+.container .pass-container button .alert {
+  color: #A3FFAE;
+  font-weight: 600;
+  position: absolute;
+  top: 50%;
+  left: -51px;
+  font-size: 12px;
+  transform: translateY(-50%);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s;
+}
+.container .pass-container button .alert.show {
+  visibility: visible;
+  opacity: 1;
 }
 .container .pass-container button:hover img {
   filter: contrast(3.5);
